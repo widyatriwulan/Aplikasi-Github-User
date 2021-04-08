@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".View.DetailUser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="166dp"
+        android:layout_marginVertical="30dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        app:civ_border_color="@color/blue_dark"
+        app:civ_border_width="2dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_weight=".5"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/blue_dark"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="@string/name" />
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight=".5"
+            android:textSize="13sp"
+            tools:text="@string/username" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/shape"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/LinearSpec">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/followers"
+                android:src="@drawable/followers" />
+
+            <TextView
+                android:id="@+id/txt_followers"
+                style="@style/textvSpec"
+                tools:text="@string/followers" />
+
+            <TextView
+                style="@style/textvSpec"
+                android:text="@string/followers" />
+
+            <TextView
+                android:id="@+id/txt_following"
+                style="@style/textvSpec"
+                tools:text="@string/following" />
+
+            <TextView
+                style="@style/textvSpec"
+                android:text="@string/following" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearSpec">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/company"
+                android:src="@drawable/company" />
+
+            <TextView
+                android:id="@+id/txt_company"
+                style="@style/textvSpec"
+                tools:text="@string/company" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearSpec">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/repository"
+                android:src="@drawable/repository" />
+
+            <TextView
+                android:id="@+id/txt_repository"
+                style="@style/textvSpec"
+                tools:text="@string/repository" />
+
+            <TextView
+                style="@style/textvSpec"
+                android:layout_marginStart="5dp"
+                android:text="@string/repository" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/LinearSpec"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/location"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:id="@+id/txt_location"
+                style="@style/textvSpec"
+                tools:text="@string/location" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabslayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:tabTextColor="@android:color/white" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"/>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
